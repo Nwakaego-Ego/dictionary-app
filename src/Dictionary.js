@@ -7,9 +7,11 @@ export default function Dictionary () {
     function submitSearch(event) {
         event.preventDefault();
         alert(`searching for the definition of ${search}`)
+      
     }
     
     function searchResult(event) {
+        
         setSearch(event.target.value)
     }
 
