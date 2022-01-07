@@ -10,9 +10,7 @@ export default function Result(props) {
                         <div>
                             {definition.definitions[0]}
                         </div>
-                        <div>
-                        {definition.definitions[0]}
-                    </div>
+                      
                     )
                 })}
         </div>
