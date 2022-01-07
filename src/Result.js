@@ -4,15 +4,7 @@ export default function Result(props) {
     console.log(props.result)
     return (
         <div>
-            <h2>{props.result.word}</h2>
-                {props.result.meanings.map(function (definition, index){
-                    return (
-                        <div>
-                            {definition.definitions[0]}
-                        </div>
-                      
-                    )
-                })}
+            <h1>hello</h1>
         </div>
     )
 }
