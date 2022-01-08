@@ -7,3 +7,9 @@ input {
     background-color: white !important;
     padding: 10px;
 }
+
+.partofspeech {
+    text-transform: capitalize;
+    font-weight: bolder;
+   
+}
