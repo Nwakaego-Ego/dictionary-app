@@ -3,33 +3,47 @@ import React, { useState } from "react";
 import Result from "./Result"
 import "./Dictionary.css"
 
-export default function Dictionary () {
-    const [search, setSearch] = useState("");
+export default function Dictionary (props) {
+    const [search, setSearch] = useState(props.default);
     const [result, setResult] = useState("")
+    const [loaded, setLoaded] = useState(false)
 
     function handleClick(response) {
         console.log(response.data[0])
         setResult(response.data[0])
     }
-
-    function submitSearch(event) {
-        event.preventDefault();
-        // alert(`searching for the definition of ${search}`)
+    
+    function submitSearch () {
         let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${search}`
         axios.get(apiUrl).then(handleClick) 
     }
+
+    function click (event) {
+        event.preventDefault();
+        submitSearch();
+    }
+
+    function load () {
+        setLoaded(true);
+        submitSearch();
+    }
+
     
     function searchResult(event) {
          setSearch(event.target.value)
     }
 
-    return (
-        <div className="Dictionary">
-            <form onSubmit={submitSearch}>
-                 <input type="search" placeholder="search...." onChange={searchResult}/>
-            </form>
-            <Result result={result}/>
-        </div>
-        
-    )
+    if (loaded) {
+        return (
+            <div className="Dictionary">
+                <form onSubmit={click}>
+                     <input type="search" placeholder="search...." onChange={searchResult} defaultValue={props.default}/>
+                </form>
+                <Result result={result}/>
+            </div>
+            
+        )
+    } else {
+        load()
+    }
 }
