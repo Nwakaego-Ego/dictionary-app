@@ -1,0 +1,16 @@
+/* .word {
+    margin-left: 20% !important;
+} */
+
+.middle {
+    display: flex;
+   
+}
+
+.middle-1 {
+    margin-right: 10%;
+}
+
+.middle-2 {
+    /* margin-left: 10%; */
+}
