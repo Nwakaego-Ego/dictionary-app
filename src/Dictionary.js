@@ -36,10 +36,16 @@ export default function Dictionary (props) {
     if (loaded) {
         return (
             <div className="Dictionary">
-                <form onSubmit={click}>
-                     <input type="search" placeholder="search...." onChange={searchResult} defaultValue={props.default}/>
-                </form>
-                <Result result={result}/>
+                  <div className="search">
+                <section >                  
+                     <form onSubmit={click}>
+                         <h4>What is on your mind?</h4>
+                         <input type="search" placeholder="search...." onChange={searchResult} defaultValue={props.default}/>
+                     </form>   
+                 </section>
+                 </div>
+                     <Result result={result}/>
+               
             </div>
             
         )

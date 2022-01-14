@@ -1,19 +1,42 @@
-Dictionary {
-    background: white;
+.Dictionary {
+    /* width: 100%; */
+    border: 1px solid #C8CFED;
+    padding: 20px;
+    background-color:  #C8CFED ;
+    border-radius: 10px;
+    box-shadow: 0px 10px  10px rgba(0, 0, 0, 0.9); 
+    margin: 0 0 15px 0
+
 }
 
 input {
-    background: white !important;
-    padding: 10px;
+  padding: 6px 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0px 10px  10px rgba(0, 0, 0, 10%); 
+  color: #333;
 }
 
-.searchButton {
-    background-color: white !important;
-    padding: 10px;
-}
+
 
 .partofspeech {
     text-transform: capitalize;
-    font-weight: bolder;
-   
+    font-weight: bolder;  
+}
+
+.Dictionary section {
+  background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 5px 5px  5px rgba(0, 0, 0, 0.7);
+    margin: 15px 0;
+}
+
+.Dictionary h4 {
+    color: #E3E6EA;
+}
+
+.search {
+    margin-left: 13%;
 }

@@ -6,11 +6,13 @@ export default function Definition (props) {
     console.log(props)
 return (
     <div className="Definition">
-        <p className="partofspeech">{props.definition.partOfSpeech}</p> 
-          {props.definition.definitions[0].definition}
-          <p><strong>Example: </strong><em>{props.definition.definitions[0].example}</em></p>
-          <Synonyms synonyms={props.definition.definitions[0].synonyms} />
-
+        <section>
+             <p className="partofspeech">{props.definition.partOfSpeech}</p> 
+              {props.definition.definitions[0].definition}
+             <p><strong>Example: </strong><em>{props.definition.definitions[0].example}</em></p>
+        </section>
+             <Synonyms synonyms={props.definition.definitions[0].synonyms} />
+       
 
         {/* {props.definition.definitions.map(function (meaning, index) {
             return (
