@@ -4,14 +4,13 @@ import Phonetics from "./Phonetics"
 import "./Result.css"
 
 export default function Result(props) {
-    console.log(props.result)
-    console.log(props)
+   
 if ( props.result) {
     return (
         <div>
             <div className="middle">
                <div className="middle-1">
-            <section className="word">
+                <section>
                 <h3 className="text-capitalize">{props.result.word}</h3>
                 {props.result.phonetics.map(function (phonetic, index ) {
                 return (
@@ -21,7 +20,7 @@ if ( props.result) {
                 
                 )
             })}
-              </section>
+             </section>
               </div>
              
              <div className="middle-2">

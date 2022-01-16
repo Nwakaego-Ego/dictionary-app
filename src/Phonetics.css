@@ -1,0 +1,13 @@
+.phonetics a {
+    text-decoration: none;
+    color:#5D32D5 ;
+    transition: all 150ms ease-in-out;
+}
+
+.phonetics a:hover {
+    background-color: #5D32D5;
+    color: white !important;
+    border-radius: 50%;
+    padding: 5px;
+   
+}

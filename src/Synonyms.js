@@ -2,22 +2,24 @@ import React from "react";
 import "./Synonyms.css"
 
 export default function Synonyms (props) {
-    console.log(props.synonyms)
-    let newSynonym = props.synonyms.slice(1, 6);
+   
+    let newSynonym = props.synonyms.slice(1, 4);
     if (props.synonyms){
         return (
-            <div className="Synonyms">
-                <section>
+            <div className="Synonyms section">
+            
+                {/* <strong>Synonyms:</strong>  */}
                 <ul>
                     {newSynonym.map(function (synonym, index) {
                         return (
                             <span key={index}>
-                               <li>{synonym}</li>
+                              
+                              <li>{synonym}</li>
                             </span>
                         )
                     } )}
                 </ul>
-                </section>
+               
             </div>
         ) 
     } else {
